@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Any Credentials</title>
+    <style>
+        body {
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f2f2f2;
+            margin: 0;
+        }
+
+        .login-box {
+            background: white;
+            padding: 25px;
+            width: 320px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .show-pass {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center; 
+        }
+
+        .show-pass label {
+            display: inline-flex;
+            align-items: center;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .show-pass input[type="checkbox"] {
+            width: auto;
+            margin: 0 8px 0 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h3>Login</h3>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <div class="show-pass">
+        <label>
+            <input type="checkbox" id="showPass" onclick="togglePassword()"> Show Password
+        </label>
+    </div>
+
+    <button onclick="login()">Login</button>
+</div>
+
+<script>
+    function login() {
+        // யூசர்நேம் மற்றும் பாஸ்வேர்ட் காலியாக இல்லையா என செக் செய்கிறோம்
+        const user = document.getElementById("username").value;
+        const pass = document.getElementById("password").value;
+
+        if (user !== "" && pass !== "") {
+            alert("Login Successful ✅");
+            // dashboard.html என்ற பெயரில் ஒரு ஃபைல் அதே ஃபோல்டரில் இருக்க வேண்டும்
+            window.location.href = "dashboard.html"; 
+        } else {
+            alert("Please enter Username and Password ❌");
+        }
+    }
+
+    function togglePassword() {
+        const passInput = document.getElementById("password");
+        const checkbox = document.getElementById("showPass");
+        passInput.type = checkbox.checked ? "text" : "password";
+    }
+</script>
+
+</body>
+</html>

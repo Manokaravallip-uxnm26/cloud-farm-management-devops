@@ -1,0 +1,148 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Farm Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+        }
+
+        /* 🔗 NAVBAR */
+        .navbar {
+            background: rgba(255,255,255,0.9);
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: green;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+
+        .navbar a:hover {
+            background-color: green;
+            color: white;
+        }
+
+        /* PAGE CONTENT CENTER */
+        .page-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-top: 70px; /* navbar space */
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+            text-align: center;
+        }
+
+        h1 {
+            color: green;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+
+        #output {
+            margin-top: 15px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🔗 COMMON NAVIGATION -->
+<div class="navbar">
+    <a href="index.html">🏠 Home</a>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="crop-management.html">🌾 Crop</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="contact.html">📞 Contact</a>
+</div>
+
+<div class="page-content">
+    <div class="container">
+        <h1>🌱 Farm Management System</h1>
+
+        <p class="tagline">
+            Enter farm and crop details to manage agriculture efficiently.
+        </p>
+
+        <input type="text" id="farmer" placeholder="Farmer Name">
+        <input type="text" id="crop" placeholder="Crop Name">
+        <input type="number" id="area" placeholder="Area (Acres)">
+
+        <button onclick="saveData()">Save Details</button>
+
+        <div id="output"></div>
+    </div>
+</div>
+
+<script>
+    function saveData() {
+        let farmer = document.getElementById("farmer").value;
+        let crop = document.getElementById("crop").value;
+        let area = document.getElementById("area").value;
+
+        if (farmer === "" || crop === "" || area === "") {
+            alert("Please fill all details ❌");
+            return;
+        }
+
+        document.getElementById("output").innerHTML =
+            "<h3>Details Saved ✅</h3>" +
+            "Farmer: " + farmer + "<br>" +
+            "Crop: " + crop + "<br>" +
+            "Area: " + area + " Acres";
+    }
+</script>
+
+</body>
+</html>

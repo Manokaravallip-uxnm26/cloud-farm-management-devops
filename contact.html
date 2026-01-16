@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us | Farm Management</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6")
+                no-repeat center center/cover;
+}
+
+/* NAVBAR */
+.navbar{
+    position: fixed;
+    top:0;
+    width:100%;
+    background:#1b5e20;
+    padding:14px 0;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    z-index:1000;
+}
+.navbar a{
+    background:white;
+    color:#1b5e20;
+    padding:8px 18px;
+    border-radius:20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+.navbar a:hover{
+    background:#2e7d32;
+    color:white;
+}
+
+/* MAIN CARD */
+.contact-card{
+    width:80%;
+    max-width:900px;
+    margin:140px auto;
+    background:#ffffff;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    overflow:hidden;
+}
+
+/* HEADER */
+.contact-header{
+    background:#e8f5e9;
+    padding:35px;
+    text-align:center;
+}
+.contact-header h1{
+    margin:0;
+    color:#1b5e20;
+}
+
+/* CONTENT */
+.contact-content{
+    display:flex;
+    justify-content:space-around;
+    padding:40px 20px;
+    text-align:center;
+}
+.box h3{
+    color:#1b5e20;
+    margin-bottom:10px;
+}
+.box p{
+    margin:5px 0;
+    color:#444;
+    font-size:15px;
+}
+
+/* FOOTER */
+.footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:12px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="cropManagement.html">Crops</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- CONTACT CARD -->
+<div class="contact-card">
+
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div class="contact-content">
+
+        <div class="box">
+            <h3>📍 Address</h3>
+            <p>Farm Management Office</p>
+            <p>Tamil Nadu, India</p>
+        </div>
+
+        <div class="box">
+            <h3>📧 Email</h3>
+            <p>farmsupport@gmail.com</p>
+            <p>devopsfarm@gmail.com</p>
+        </div>
+
+        <div class="box">
+            <h3>📞 Phone</h3>
+            <p>+91 98765 43210</p>
+            <p>+91 91234 56789</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        DevOps for Cloud-Based Farm Management System © 2026
+    </div>
+
+</div>
+
+</body>
+</html>
